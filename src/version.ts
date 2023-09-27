@@ -1,1 +1,1 @@
-export const TS_IBE_VERSION = "1.0.3";
+export const TS_IBE_VERSION = "1.0.4";

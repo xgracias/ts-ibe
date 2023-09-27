@@ -1,4 +1,4 @@
-# IBC TypeScript Client
+# IBE TypeScript Client
 
 A library to encrypt and decrypt data
 
