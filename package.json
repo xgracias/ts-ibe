@@ -1,12 +1,21 @@
 {
   "name": "ts-ibe",
   "version": "1.0.0",
-  "description": "",
+  "description": "A library to encrypt and decrypt data",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "keywords": [
+    "ibe",
+    "identity",
+    "encrypt",
+    "decrypt",
+    "ts-ibe"
+  ],
+  "author": "Sandy Nguyen",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  }
 }
