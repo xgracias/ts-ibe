@@ -10,51 +10,22 @@ A library to encrypt and decrypt data
 
 ## Installing
 
-<div class="tabs">
-  <input type="radio" id="tab1" name="tabs" checked class="hidden">
-  <label for="tab1" class="label">npm</label>
-  <div class="tab">
-    npm i ts-ibe
-  </div>
+### Package manager
 
-  <input type="radio" id="tab2" name="tabs" class="hidden">
-  <label for="tab2" class="label">yarn</label>
-  <div class="tab">
-    yarn add ts-ibe
-  </div>
+Using npm:
 
-  <input type="radio" id="tab3" name="tabs" class="hidden">
-  <label for="tab3" class="label">pnpm</label>
-  <div class="tab">
-    pnpm add ts-ibe
-  </div>
-</div>
+```bash
+$ npm install ts-ibe
+```
 
-<style>
-  .tabs {
-    display: flex;
-    flex-direction: column;
-    max-width: 400px;
-  }
+Using yarn:
 
-  .tab {
-    display: none;
-    background-color: gray;
-    border-radius: 2px;
-    color: black;
-    margin-top: 5px;
-    padding-left: 5px;
-  }
+```bash
+$ yarn add ts-ibe
+```
 
-  .hidden {
-    visibility: hidden;
-  }
+Using pnpm:
 
-  input[type="radio"]:checked + label + .tab {
-    display: block;
-  }
-
-  .label {
-    cursor: pointer;
-  }
-</style>
+```bash
+$ pnpm add ts-ibe
+```
