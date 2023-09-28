@@ -16,8 +16,8 @@ export function xor(a: Uint8Array, b: Uint8Array): Uint8Array {
   return ret;
 }
 
-////// code from Noble:
-////// https://github.com/paulmillr/noble-bls12-381/blob/6380415f1b7e5078c8883a5d8d687f2dd3bff6c2/index.ts#L132-L145
+// code from Noble:
+// https://github.com/paulmillr/noble-bls12-381/blob/6380415f1b7e5078c8883a5d8d687f2dd3bff6c2/index.ts#L132-L145
 export function bytesToNumberBE(uint8a: Uint8Array): bigint {
   return BigInt("0x" + bytesToHex(Uint8Array.from(uint8a)));
 }
