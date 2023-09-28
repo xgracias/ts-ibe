@@ -1,6 +1,6 @@
 {
   "name": "ts-ibe",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A library to encrypt and decrypt data",
   "source": "src/index.ts",
   "main": "dist/index.js",
@@ -18,8 +18,8 @@
     "decrypt",
     "ts-ibe"
   ],
-  "author": "Sandy Nguyen",
-  "license": "(Apache-2.0 OR MIT)",
+  "author": "",
+  "license": "Apache-2.0 OR MIT",
   "devDependencies": {
     "@types/node": "^20.7.0",
     "typescript": "^5.2.2"
