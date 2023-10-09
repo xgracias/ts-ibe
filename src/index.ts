@@ -45,5 +45,5 @@ export async function timelockEncrypt(
 ): Promise<string> {
   const timelockEncrypter = createTimelockEncrypter(id, pubKey);
   const agePayload = await encryptAge(payload, timelockEncrypter);
-  return Buffer.from(agePayload, "binary").toString("hex");
+  return Buffer.from(agePayload, "binary").toString();
 }
