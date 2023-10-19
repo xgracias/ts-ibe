@@ -7,17 +7,13 @@ import { readAge, writeAge } from "./age-reader-writer";
 import { sliceUntil, unpaddedBase64Buffer } from "./utils";
 import { createMacKey, random } from "./utils-crypto";
 
+// `Stanza` is a section of the age header that encapsulates the file key as
+// encrypted to a specific recipient.
+import { Stanza } from "../types";
+
 type FileKey = Uint8Array;
 type EncryptionWrapper = (fileKey: FileKey) => Promise<Array<Stanza>>;
 type DecryptionWrapper = (recipients: Array<Stanza>) => Promise<FileKey>;
-
-// `Stanza` is a section of the age header that encapsulates the file key as
-// encrypted to a specific recipient.
-type Stanza = {
-  type: string;
-  args: Array<string>;
-  body: Uint8Array;
-};
 
 const ageVersion = "age-encryption.org/v1";
 const headerMacMessage = "header"; // some plaintext used to generate the mac

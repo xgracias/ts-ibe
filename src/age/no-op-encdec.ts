@@ -1,10 +1,5 @@
+import { Stanza } from "../types";
 const noOpType = "no-op";
-
-type Stanza = {
-  type: string;
-  args: Array<string>;
-  body: Uint8Array;
-};
 
 // if you wish to encrypt with AGE but simply pass the filekey in the recipient stanza, then use this
 // protip: you probably don't!

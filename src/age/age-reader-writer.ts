@@ -1,12 +1,7 @@
 import { Buffer } from "buffer";
 import { chunked, unpaddedBase64 } from "./utils";
 import { createMacKey } from "./utils-crypto";
-
-type Stanza = {
-  type: string;
-  args: Array<string>;
-  body: Uint8Array;
-};
+import { Stanza } from "../types";
 
 type AgeEncryptionInput = {
   fileKey: Uint8Array;
