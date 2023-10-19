@@ -43,11 +43,11 @@ const recipients = (stanzas: Array<Stanza>) =>
 
 const recipient = (stanza: Stanza) => {
   const type = stanza.type;
-  // const aggregatedArgs = stanza.args.join(" ");
+  const aggregatedArgs = stanza.args.join(" ");
   const encodedBody = unpaddedBase64(stanza.body);
   const chunkedEncodedBody = chunked(encodedBody, 64).join("\n");
 
-  return `-> ${type}\n` + chunkedEncodedBody;
+  return `-> ${type} ${aggregatedArgs}\n` + chunkedEncodedBody;
 };
 
 // The `---` preceding the MAC is technically part of the MAC-able text
@@ -116,7 +116,7 @@ function parseRecipients(lines: Array<string>): Array<Stanza> {
       throw Error(`expected stanza '${type} to have a body, but it didn't`);
     }
 
-    recipients.push({ type, body: Buffer.from(body, "base64") });
+    recipients.push({ type, args, body: Buffer.from(body, "base64") });
   }
 
   if (recipients.length === 0) {

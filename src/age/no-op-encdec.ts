@@ -8,7 +8,7 @@ class NoOpEncDec {
     return [
       {
         type: noOpType,
-        // args: [],
+        args: [],
         body: filekey,
       },
     ];

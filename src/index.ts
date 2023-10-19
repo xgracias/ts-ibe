@@ -18,7 +18,7 @@ function createTimelockEncrypter(id: string, pubKey: string) {
     return [
       {
         type: "distIBE",
-        // args: [`${id}`],
+        args: [`${id}`],
         body: serialisedCiphertext(ciphertext),
       },
     ];
@@ -36,9 +36,10 @@ function serialisedCiphertext(ciphertext: Ciphertext): Uint8Array {
 export async function timelockEncrypt(
   identity: string,
   pubKey: string,
-  payload: Buffer
+  payload: Uint8Array
 ): Promise<string> {
   const timelockEncrypter = createTimelockEncrypter(identity, pubKey);
   const agePayload = await encryptAge(payload, timelockEncrypter);
+
   return Buffer.from(agePayload, "binary").toString();
 }

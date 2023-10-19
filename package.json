@@ -1,6 +1,6 @@
 {
   "name": "ts-ibe",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "A library to encrypt and decrypt data",
   "source": "src/index.ts",
   "main": "dist/index.js",
