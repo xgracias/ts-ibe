@@ -43,11 +43,10 @@ const recipients = (stanzas: Array<Stanza>) =>
 
 const recipient = (stanza: Stanza) => {
   const type = stanza.type;
-  const aggregatedArgs = stanza.args.join(" ");
   const encodedBody = unpaddedBase64(stanza.body);
   const chunkedEncodedBody = chunked(encodedBody, 64).join("\n");
 
-  return `-> ${type} ${aggregatedArgs}\n` + chunkedEncodedBody;
+  return `-> ${type}\n` + chunkedEncodedBody;
 };
 
 // The `---` preceding the MAC is technically part of the MAC-able text
