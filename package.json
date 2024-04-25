@@ -1,6 +1,6 @@
 {
   "name": "ts-ibe",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "description": "A library to encrypt and decrypt data",
   "source": "src/index.ts",
   "main": "dist/index.js",
@@ -13,10 +13,7 @@
   },
   "keywords": [
     "ibe",
-    "identity",
-    "encrypt",
-    "decrypt",
-    "ts-ibe"
+    "identity-based-encryption"
   ],
   "author": "",
   "license": "Apache-2.0 OR MIT",
